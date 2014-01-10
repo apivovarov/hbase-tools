@@ -38,7 +38,7 @@ public class X4Bytes {
       String reason =
           "offset (" + offset + ") + length (" + length + ") exceed the"
               + " capacity of the array: " + bytes.length;
-      new IllegalArgumentException(reason);
+      throw new IllegalArgumentException(reason);
     }
     long l = bytes[0] >= 0 ? 0L : 65535L;
 
